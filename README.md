@@ -1,10 +1,12 @@
-# Animal Shelter API
+# Animal Shelter API 🐕🐈🏠
 by Hayeong Pyeon
 
 ## Table of Contents
 1. [Technologies Used](#technologies-used)
 2. [Description](#description)
 3. [Setup Instructions](#setup-instructions)
+4. [Testing API Endpoints](#testing-the-api-endpoints)
+5. [Further Exploration](#further-exploration-versioning)
 4. [Known Bugs](#known-bugs)
 5. [License](#license)
 
@@ -20,8 +22,7 @@ by Hayeong Pyeon
 - This application is an independent project as a review of **Building an API** chapter of **C#** course provided by Epicodus.
 - This API is created for a local animal shelter which provides a list of cats and dogs at the shelter.
 - The project objectives are as follows:    
-*boxes will be checked upon completion of this project*
-> - [ ] Full CRUD functionality.
+> - [x] Full CRUD functionality.
 > - [x] Further exploration - *versioning*.
 > - [x] Complete documentation of API endpoints and the further exploration.  
 
@@ -143,7 +144,7 @@ http://localhost:5000/api/v{version}/dogs
 - More info about `API versioning` can be found [here](https://christian-schou.dk/blog/how-to-use-api-versioning-in-net-core-web-api/).
 
 ## Known Bugs
-*currently under development as of March 25, 2024*
+No bug found as of March 26, 2024. [Reach out](mailto:hayeong.pyeon@gmail.com) if found any.
 
 ## License
 [MIT](/LICENSE.txt) | Copyright © 2024 Hayeong Pyeon
