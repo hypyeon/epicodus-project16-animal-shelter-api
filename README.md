@@ -11,6 +11,10 @@ by Hayeong Pyeon
 ## Technologies Used
 - C#, .NET
 - ASP.NET Core MVC
+- MySQL
+- Entity Framework Core
+- Swagger 
+- Postman 
 
 ## Description
 - This application is an independent project as a review of **Building an API** chapter of **C#** course provided by Epicodus.
@@ -18,8 +22,8 @@ by Hayeong Pyeon
 - The project objectives are as follows:    
 *boxes will be checked upon completion of this project*
 > - [ ] Full CRUD functionality.
-> - [ ] Further exploration - *versioning*.
-> - [ ] Complete documentation of API endpoints and the further exploration.  
+> - [x] Further exploration - *versioning*.
+> - [x] Complete documentation of API endpoints and the further exploration.  
 
 ## Setup Instructions
 ### Precondition
