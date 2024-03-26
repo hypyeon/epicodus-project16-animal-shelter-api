@@ -18,7 +18,7 @@ by Hayeong Pyeon
 - The project objectives are as follows:    
 *boxes will be checked upon completion of this project*
 > - [ ] Full CRUD functionality.
-> - [ ] Further exploration of *versioning*. 
+> - [ ] Further exploration - *versioning*.
 > - [ ] Complete documentation of API endpoints and the further exploration.  
 
 ## Setup Instructions
@@ -78,15 +78,65 @@ appsettings.*.json
 This API can be tested with an API platform. Author used [Postman](https://www.postman.com/) while developing. 
 
 ### Available Endpoints
-*only a format - to be updated*
 ```
-GET http://localhost:5000/api/animals/
-GET http://localhost:5000/api/animals/{id}
-POST http://localhost:5000/api/animals/
-PUT http://localhost:5000/api/animals/{id}
-DELETE http://localhost:5000/api/animals/{id}
+GET http://localhost:5000/api/v1/dogs/
+GET http://localhost:5000/api/v1/dogs/{id}
+POST http://localhost:5000/api/v1/dogs/
+PUT http://localhost:5000/api/v1/dogs/{id}
+DELETE http://localhost:5000/api/v1/dogs/{id}
 ```
 `{id}` is a variable that should be replaced with the id number of the animal you want to `GET`, `PUT`, or `DELETE`. 
+
+#### Optional Query String Parameters for GET Request
+GET requests to `http://localhost:5000/api/v1/dogs/` can optionally include query strings to filter or search dogs.
+> The following query will return all dogs with a sex value of **Female**. 
+```
+GET http://localhost:5000/api/v1/dogs?sex=female
+```
+> The following query will return all dogs with a neuteredSpayed value of **true**.
+```
+GET http://localhost:5000/api/v1/dogs?neuteredSpayed=true
+```
+
+#### Additional Requirements for POST Request
+When making a POST request to `http://localhost:5000/api/v1/dogs/`, you need to include a **body**. Here's an example body in JSON:
+```
+{
+  "name": "Buddy",
+  "breed": "German Shepherd",
+  "sex": "Male",
+  "age": "1 year (estimate)",
+  "neuteredSpayed:" true
+}
+```
+#### Additional Requirements for PUT Request
+When making a PUT request to `http://localhost:5000/api/v1/dogs/{id}`, you need to include a body that includes the dog's dogId property. Here's an example body in JSON:
+```
+{
+  "dogId": 1,
+  "name": "Rosy",
+  "breed": "Chihuahua",
+  "sex": "Female",
+  "age": "3 weeks",
+  "neuteredSpayed:" false
+}
+```
+And here's the PUT request we would send the previous body to:
+```
+http://localhost:5000/api/v1/dogs/1
+```
+The value of `dogId` needs to match the id number in the URL. (In this example, they are both `1`.)
+
+## Further Exploration: Versioning
+API versioning is a technique used to manage changes in the API over time. It allows developers to introduce new features, modify existing ones, or deprecate certain functionalities without breaking existing client applications.
+- To specify the API version in the URL, use the following format (replace `{version}` with the desired version number):
+```
+http://localhost:5000/api/v{version}/dogs
+```
+### Additional Information
+- The default API version is set to 1.0 that will be used when no version is specified. (Currently only v1 is available)
+- API responses will include information about the API version used.
+- More info about `API versioning` can be found [here](https://christian-schou.dk/blog/how-to-use-api-versioning-in-net-core-web-api/).
 
 ## Known Bugs
 *currently under development as of March 25, 2024*

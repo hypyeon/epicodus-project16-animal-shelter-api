@@ -5,6 +5,8 @@ namespace AnimalShelterApi.Models
   public class Dog
   {
     public int DogId { get; set; }
+    [Required]
+    [StringLength(20)]
     public string Name { get; set; }
     public string Breed { get; set; }
     public string Sex { get; set; }
