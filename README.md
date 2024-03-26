@@ -25,6 +25,7 @@ by Hayeong Pyeon
 > - [x] Full CRUD functionality.
 > - [x] Further exploration - *versioning*.
 > - [x] Complete documentation of API endpoints and the further exploration.  
+- For another further exploration objective, the frontend MVC application that consumes this API is build and uploaded in this [repo](https://github.com/hypyeon/epicodus-project16-animal-shelter-client).
 
 ## Setup Instructions
 ### Precondition
@@ -111,7 +112,7 @@ When making a POST request to `http://localhost:5000/api/v1/dogs/`, you need to 
   "breed": "German Shepherd",
   "sex": "Male",
   "age": "1 year (estimate)",
-  "neuteredSpayed:" true
+  "neuteredSpayed": true
 }
 ```
 #### Additional Requirements for PUT Request
@@ -123,14 +124,14 @@ When making a PUT request to `http://localhost:5000/api/v1/dogs/{id}`, you need 
   "breed": "Chihuahua",
   "sex": "Female",
   "age": "3 weeks",
-  "neuteredSpayed:" false
+  "neuteredSpayed": false
 }
 ```
 And here's the PUT request we would send the previous body to:
 ```
-http://localhost:5000/api/v1/dogs/1
+http://localhost:5000/api/v1/dogs/3
 ```
-The value of `dogId` needs to match the id number in the URL. (In this example, they are both `1`.)
+The value of `dogId` needs to match the id number in the URL. (In this example, they are both `3`.)
 
 ## Further Exploration: Versioning
 API versioning is a technique used to manage changes in the API over time. It allows developers to introduce new features, modify existing ones, or deprecate certain functionalities without breaking existing client applications.
