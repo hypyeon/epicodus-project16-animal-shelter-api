@@ -119,7 +119,7 @@ When making a POST request to `http://localhost:5000/api/v1/dogs/`, you need to 
 When making a PUT request to `http://localhost:5000/api/v1/dogs/{id}`, you need to include a body that includes the dog's dogId property. Here's an example body in JSON:
 ```
 {
-  "dogId": 1,
+  "dogId": 3,
   "name": "Rosy",
   "breed": "Chihuahua",
   "sex": "Female",
